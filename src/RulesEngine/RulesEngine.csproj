@@ -5,7 +5,7 @@
     <Version>5.0.2</Version>
     <Copyright>Copyright (c) Microsoft Corporation.</Copyright>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <PackageProjectUrl>https://github.com/microsoft/RulesEngine</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/yangxueminghao/RulesEngine</PackageProjectUrl>
     <Authors>Abbas Cyclewala</Authors>
     <Description>Rules Engine is a package for abstracting business logic/rules/policies out of the system. This works in a very simple way by giving you an ability to put your rules in a store outside the core logic of the system thus ensuring that any change in rules doesn't affect the core system.</Description>
 	  <PackageReleaseNotes>https://github.com/microsoft/RulesEngine/blob/main/CHANGELOG.md</PackageReleaseNotes>
@@ -25,6 +25,8 @@
     <DelaySign>True</DelaySign>
     <Deterministic>true</Deterministic>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageId>ZCFX.$(AssemblyName)</PackageId>
   </PropertyGroup>
 
   <ItemGroup>

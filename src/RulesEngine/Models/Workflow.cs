@@ -23,7 +23,7 @@ namespace RulesEngine.Models
         /// <summary>
         /// Gets the workflow name.
         /// </summary>
-        public string WorkflowName { get; set; }
+        public virtual string WorkflowName { get; set; }
 
         /// <summary>Gets or sets the workflow rules to inject.</summary>
         /// <value>The workflow rules to inject.</value>
@@ -38,11 +38,11 @@ namespace RulesEngine.Models
         /// <summary>
         /// Gets or Sets the global params which will be applicable to all rules
         /// </summary>
-        public IEnumerable<ScopedParam> GlobalParams { get; set; }
+        public virtual IEnumerable<ScopedParam> GlobalParams { get; set; }
 
         /// <summary>
         /// list of rules.
         /// </summary>
-        public IEnumerable<Rule> Rules { get; set; }
+        public virtual IEnumerable<Rule> Rules { get; set; }
     }
 }
