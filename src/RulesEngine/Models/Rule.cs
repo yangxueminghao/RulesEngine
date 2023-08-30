@@ -15,6 +15,11 @@ namespace RulesEngine.Models
     public class Rule
     {
         /// <summary>
+        /// Reserved for Database / Entity Framework implementations
+        /// </summary>
+        [JsonIgnore]
+        public int? Id { get; set; }
+        /// <summary>
         /// Rule name for the Rule
         /// </summary>
         public string RuleName { get; set; }
@@ -41,6 +46,12 @@ namespace RulesEngine.Models
         public string Expression { get; set; }
         public RuleActions Actions { get; set; }
         public string SuccessEvent { get; set; }
+        [JsonIgnore]
+        public bool? IsSuccess { get; set; }
+        [JsonIgnore]
+        public string ExceptionMessage { get; set; }
+        [JsonIgnore]
+        public int Seq { get; set; }
 
     }
 }

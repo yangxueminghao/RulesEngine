@@ -2,6 +2,7 @@
 //  Licensed under the MIT License.
 
 using System.Diagnostics.CodeAnalysis;
+using System.Text.Json.Serialization;
 
 namespace RulesEngine.Models
 {
@@ -23,6 +24,13 @@ namespace RulesEngine.Models
         /// Gets or Sets the lambda expression which can be reference in Rule. 
         /// </summary>
         public string Expression { get; set; }
+        /// <summary>
+        /// Reserved for Database / Entity Framework implementations
+        /// </summary>
+        [JsonIgnore]
+        public int? Id { get; set; }
+        [JsonIgnore]
+        public int Seq { get; set; }
     }
 
     [ExcludeFromCodeCoverage]

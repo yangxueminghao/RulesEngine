@@ -21,6 +21,11 @@ namespace RulesEngine.Models
     public class Workflow
     {
         /// <summary>
+        /// Reserved for Database / Entity Framework implementations
+        /// </summary>
+        [JsonIgnore]
+        public int? Id { get; set; }
+        /// <summary>
         /// Gets the workflow name.
         /// </summary>
         public virtual string WorkflowName { get; set; }
@@ -44,5 +49,7 @@ namespace RulesEngine.Models
         /// list of rules.
         /// </summary>
         public virtual IEnumerable<Rule> Rules { get; set; }
+        [JsonIgnore]
+        public int Seq { get; set; }
     }
 }
